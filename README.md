@@ -2,16 +2,21 @@
 
 <div align="center">
 
-![HackTheWeb Logo](https://img.shields.io/badge/HackTheWeb-v1.0-blue?style=for-the-badge)
+<img src="public/logo.png" alt="HackTheWeb Logo" width="220" style="border-radius: 20px; box-shadow: 0 4px 20px rgba(0, 245, 212, 0.3);" />
+
+<br><br>
+
+[![Live Website](https://img.shields.io/badge/Live%20Website-yashabcyber7.github.io%2Fhacktheweb-00F5D4?style=for-the-badge&logo=googlechrome&logoColor=black)](https://yashabcyber7.github.io/hacktheweb/)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-10B981?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yashabcyber7/hacktheweb/releases)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-linux-lightgrey?style=for-the-badge)](https://www.linux.org/)
 
-**AI-Powered Web Application Penetration Testing Tool**
+**AI-Powered Web Application Penetration Testing Framework**
 
 *Automated security testing with intelligent decision-making*
 
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Documentation](#documentation)
+[Website](https://yashabcyber7.github.io/hacktheweb/) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [Documentation](#documentation)
 
 </div>
 
@@ -89,7 +94,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yashab-cyber/hacktheweb.git
+git clone https://github.com/yashabcyber7/hacktheweb.git
 cd hacktheweb
 
 # Run installation script
@@ -359,7 +364,7 @@ Contributions are welcome! Please follow these guidelines:
 
 ```bash
 # Clone and install in development mode
-git clone https://github.com/yashab-cyber/hacktheweb.git
+git clone https://github.com/yashabcyber7/hacktheweb.git
 cd hacktheweb
 pip install -e ".[dev]"
 
@@ -400,8 +405,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **YashAB Cyber Security (Yashab Alam)**
 
-- GitHub: [@yashab-cyber](https://github.com/yashab-cyber)
-- Website: [hacktheweb.io](https://hacktheweb.io)
+- GitHub: [@yashabcyber7](https://github.com/yashabcyber7)
+- Website: [yashabcyber7.github.io/hacktheweb](https://yashabcyber7.github.io/hacktheweb/)
 - Instagram: [@yashabcyber](https://www.instagram.com/yashabcyber)
 - X (formerly Twitter): [@Yashab_cyber](https://x.com/Yashab_cyber)
 - LinkedIn: [Yashab Alam](https://www.linkedin.com/in/yashab-alam)
@@ -420,8 +425,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support & Inquiries
 
 For support, feedback, or custom inquiries:
-- **GitHub Issues:** [Issues](https://github.com/yashab-cyber/hacktheweb/issues)
-- **GitHub Discussions:** [Discussions](https://github.com/yashab-cyber/hacktheweb/discussions)
+- **GitHub Issues:** [Issues](https://github.com/yashabcyber7/hacktheweb/issues)
+- **GitHub Discussions:** [Discussions](https://github.com/yashabcyber7/hacktheweb/discussions)
 - **Primary Email:** [yashabalam9@gmail.com](mailto:yashabalam9@gmail.com)
 - **Secondary Email:** [yashabalam707@gmail.com](mailto:yashabalam707@gmail.com)
 - **Donation Enquiries:** Please see [DONATE.md](DONATE.md) for more details.
