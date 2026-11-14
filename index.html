@@ -1,678 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>SwarmDroid — Autonomous Multi-Agent AI Ecosystem for Android</title>
-  <meta name="description" content="SwarmDroid is an advanced multi-agent AI ecosystem for Android. Orchestrate autonomous collaborative agents, plan DAG task workflows, and execute with hardware-backed Keystore security.">
-  <meta name="theme-color" content="#08090D">
-
-  <!-- OpenGraph & Twitter Cards -->
-  <meta property="og:title" content="SwarmDroid — Multi-Agent AI Ecosystem for Android">
-  <meta property="og:description" content="Orchestrate autonomous collaborative agents with DAG task execution and hardware-backed security on Android.">
-  <meta property="og:image" content="assets/logo.png">
-  <meta property="og:type" content="website">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo.png">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HackTheWeb - An AI-powered, production-ready web application security scanner and penetration testing framework.">
+    <meta name="author" content="Yashab Alam (YashAB Cyber Security)">
+    <title>HackTheWeb - AI-Powered Web Application Security Scanner</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Outfit:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Ambient Light Orbs -->
-  <div class="ambient-glow glow-cyan"></div>
-  <div class="ambient-glow glow-violet"></div>
-
-  <!-- Top Announcement Bar -->
-  <div class="announcement-bar">
-    <div class="container announcement-content">
-      <span class="announcement-badge">CONTRACT</span>
-      <span>Contract Address (CA): <strong class="ca-highlight">Soon Available</strong> • Official launch will be announced on this repository</span>
-    </div>
-  </div>
-
-  <!-- Navigation Bar -->
-  <header class="navbar" id="top">
-    <div class="nav-container">
-      <a href="#top" class="brand">
-        <img src="assets/logo.png" alt="SwarmDroid Logo" class="brand-logo">
-        <span class="brand-name">SwarmDroid</span>
-        <span class="brand-badge">v1.0 Release</span>
-      </a>
-
-      <!-- Desktop Nav Links -->
-      <nav class="nav-links" id="nav-links">
-        <a href="#swarm">Swarm Engine</a>
-        <a href="#features">Features</a>
-        <a href="#agents">Agents</a>
-        <a href="#security">Security</a>
-        <a href="#tech">Tech Stack</a>
-        <a href="#download" class="nav-link-mobile-cta">Download APK</a>
-      </nav>
-
-      <!-- Nav Actions -->
-      <div class="nav-actions">
-        <a href="https://github.com/swarm-droid/swarmdroid" target="_blank" rel="noopener noreferrer" class="btn btn-github">
-          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-          <span class="btn-text">Star on GitHub</span>
-        </a>
-        <a href="assets/app-debug.apk" class="btn btn-primary" download="SwarmDroid-v1.0.apk">
-          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-          </svg>
-          <span class="btn-text">Download APK</span>
-        </a>
-        <!-- Hamburger Menu Toggle Button -->
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Hero Section -->
-  <section class="hero-section">
-    <div class="container hero-container">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span>Autonomous Multi-Agent Mobile Architecture • v1.0.0 Release</span>
-      </div>
-
-      <h1 class="hero-title">
-        An Entire Swarm of Intelligence.<br>
-        <span class="gradient-text">Engineered for Android.</span>
-      </h1>
-
-      <p class="hero-description">
-        Move beyond single-turn chatbots. SwarmDroid brings a collaborative swarm of specialized autonomous AI agents to your phone—breaking complex natural-language goals into Directed Acyclic Graphs, delegating tasks, and running securely on-device with hardware-backed encryption.
-      </p>
-
-      <div class="hero-cta-group">
-        <a href="assets/app-debug.apk" class="btn btn-primary btn-lg" download="SwarmDroid-v1.0.apk">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993s-.4482.9997-.9993.9997m11.4045-6.02l1.9967-3.4583a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4111 13.8533 8.0945 12 8.0945s-3.5902.3166-5.1362.8561L4.8415 5.4476a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9967 3.4583C2.6889 11.1867.3432 14.6589 0 18.745h24c-.3432-4.0861-2.6889-7.5583-6.1185-9.4236"/>
-          </svg>
-          <span>Download SwarmDroid APK</span>
-          <span class="btn-meta-tag">18.5 MB</span>
-        </a>
-        <a href="https://github.com/swarm-droid/swarmdroid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-          <span>View Source on GitHub</span>
-        </a>
-      </div>
-
-      <!-- Contract Address Status Card -->
-      <div class="ca-status-card">
-        <div class="ca-header">
-          <span class="ca-dot"></span>
-          <span class="ca-title">Contract Address (CA)</span>
-          <span class="ca-status-pill">Soon Available</span>
-        </div>
-        <p class="ca-description">The official smart contract address will be published here upon mainnet launch. Beware of fake tokens and impersonators.</p>
-      </div>
-
-      <!-- Trust Metrics -->
-      <div class="metrics-row">
-        <div class="metric-card">
-          <span class="metric-val ca-metric">SOON</span>
-          <span class="metric-lbl">CA Launch</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-card">
-          <span class="metric-val">8+</span>
-          <span class="metric-lbl">Specialized Agents</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-card">
-          <span class="metric-val">DAG</span>
-          <span class="metric-lbl">Task Graph Engine</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-card">
-          <span class="metric-val">AES-256</span>
-          <span class="metric-lbl">Hardware Keystore</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-card">
-          <span class="metric-val">100%</span>
-          <span class="metric-lbl">Open Source</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Swarm Engine Terminal Section -->
-  <section class="section terminal-section" id="swarm">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag">Orchestration Visualizer</span>
-        <h2 class="section-title">Watch the Swarm Collaborate in Real Time</h2>
-        <p class="section-subtitle">
-          The Master Agent deconstructs complex goals into a dependency task graph, dispatches parallel subtasks across specialized agents, and streams execution results.
-        </p>
-      </div>
-
-      <!-- Live Terminal & Visualizer Card -->
-      <div class="terminal-card">
-        <!-- Top Toolbar -->
-        <div class="terminal-toolbar">
-          <div class="terminal-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-            <span class="terminal-tab-title">SwarmDroid Orchestrator v1.0.0</span>
-          </div>
-
-          <div class="workflow-presets">
-            <span class="presets-label">Workflow:</span>
-            <button class="preset-pill active" data-flow="research_social">Research & Post to X</button>
-            <button class="preset-pill" data-flow="code_debug">Code & Sandbox Test</button>
-            <button class="preset-pill" data-flow="dynamic_agent">Dynamic Agent Spawning</button>
-          </div>
-        </div>
-
-        <!-- Node Graph Stage -->
-        <div class="graph-stage-wrapper">
-          <canvas id="swarm-canvas" class="swarm-canvas"></canvas>
-        </div>
-
-        <!-- Live Execution Log Stream -->
-        <div class="terminal-log-panel">
-          <div class="log-panel-header">
-            <div class="log-panel-title">
-              <span class="pulse-indicator"></span>
-              <span>Live Execution Log</span>
-            </div>
-            <button id="btn-run-simulation" class="btn btn-run">
-              <span class="run-icon">▶</span>
-              <span>Execute Workflow</span>
-            </button>
-          </div>
-
-          <div id="sim-log-stream" class="terminal-stream">
-            <div class="log-line system"><span class="log-time">[00:00.00]</span> ⚡ Swarm engine initialized. Master Agent (Aegis Prime) ready.</div>
-            <div class="log-line info"><span class="log-time">[00:00.01]</span> 🤖 Ready to accept complex user tasks. Select a workflow preset and press Execute.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bento Features Grid Section -->
-  <section class="section features-section" id="features">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Core Capabilities</span>
-        <h2 class="section-title">Engineered from Silicon to UI</h2>
-        <p class="section-subtitle">
-          Designed specifically for mobile constraints: low memory footprint, strict Android sandbox security, and graceful offline fallback.
-        </p>
-      </div>
-
-      <div class="bento-grid">
-        <!-- Bento 1: Master Agent DAG -->
-        <div class="bento-card bento-wide">
-          <div class="bento-icon">👑</div>
-          <h3 class="bento-title">Autonomous DAG Task Decomposition</h3>
-          <p class="bento-desc">
-            Rather than hallucinating answers in a single pass, the Master Agent decomposes user requests into an executable Directed Acyclic Graph with explicit dependency management, retry bounds, and parallel execution.
-          </p>
-          <div class="bento-tags">
-            <span class="tag">Topological Sort</span>
-            <span class="tag">Bounded Concurrency</span>
-            <span class="tag">Dynamic Re-planning</span>
-          </div>
-        </div>
-
-        <!-- Bento 2: Hardware Keystore -->
-        <div class="bento-card">
-          <div class="bento-icon">🔐</div>
-          <h3 class="bento-title">Hardware-Backed Security</h3>
-          <p class="bento-desc">
-            API keys for Gemini, OpenAI, Claude, and OpenRouter are stored in the hardware-backed Android Keystore with AES-256-GCM encryption. Zero plain-text credentials.
-          </p>
-          <div class="bento-tags">
-            <span class="tag">Android Keystore</span>
-            <span class="tag">AES-256-GCM</span>
-          </div>
-        </div>
-
-        <!-- Bento 3: Dynamic Agent Spawning -->
-        <div class="bento-card">
-          <div class="bento-icon">⚡</div>
-          <h3 class="bento-title">Dynamic Agent Spawning</h3>
-          <p class="bento-desc">
-            When a workflow demands a novel capability not present in the pre-installed roster, the Master Agent instantiates a sandboxed agent with approved permission bounds.
-          </p>
-          <div class="bento-tags">
-            <span class="tag">Runtime Instantiation</span>
-            <span class="tag">Scoped Tools</span>
-          </div>
-        </div>
-
-        <!-- Bento 4: Human-in-the-Loop -->
-        <div class="bento-card">
-          <div class="bento-icon">🛑</div>
-          <h3 class="bento-title">Human-in-the-Loop Safeguards</h3>
-          <p class="bento-desc">
-            Irreversible actions—such as sending emails, publishing social media posts, or modifying system settings—strictly pause for explicit user confirmation via biometric or tap dialogs.
-          </p>
-          <div class="bento-tags">
-            <span class="tag">Approval Gate</span>
-            <span class="tag">Audit Log</span>
-          </div>
-        </div>
-
-        <!-- Bento 5: Vector Memory -->
-        <div class="bento-card">
-          <div class="bento-icon">🧠</div>
-          <h3 class="bento-title">On-Device Semantic Vector Memory</h3>
-          <p class="bento-desc">
-            Structured records stored locally in SQLite Room, backed by cosine-similarity vector embeddings. Inspect, export, or wipe memory at any time.
-          </p>
-          <div class="bento-tags">
-            <span class="tag">Room DB</span>
-            <span class="tag">Cosine Similarity</span>
-            <span class="tag">User Controlled</span>
-          </div>
-        </div>
-
-        <!-- Bento 6: Multi-Provider Engine -->
-        <div class="bento-card">
-          <div class="bento-icon">🌐</div>
-          <h3 class="bento-title">Multi-Provider AI Engine</h3>
-          <p class="bento-desc">
-            Switch effortlessly between Google Gemini, OpenAI, Anthropic Claude, OpenRouter, and local offline Ollama models without re-architecting your workflows.
-          </p>
-          <div class="bento-tags">
-            <span class="tag">Gemini</span>
-            <span class="tag">OpenAI</span>
-            <span class="tag">Claude</span>
-            <span class="tag">Ollama</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Specialized Agents Directory Section -->
-  <section class="section agents-section" id="agents">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag">Swarm Architecture</span>
-        <h2 class="section-title">8 Specialized Autonomous Agents</h2>
-        <p class="section-subtitle">
-          Each agent operates within an isolated permission boundary, explicit tool allowlist, and independent memory scope.
-        </p>
-      </div>
-
-      <div class="agents-grid">
-        <!-- Master Agent -->
-        <div class="agent-card master-agent">
-          <div class="agent-header">
-            <span class="agent-emoji">👑</span>
-            <div>
-              <h3 class="agent-name">Master Agent</h3>
-              <span class="agent-code">Aegis Prime</span>
-            </div>
-            <span class="badge-role">Core Brain</span>
-          </div>
-          <p class="agent-summary">
-            Deconstructs natural-language prompts, analyzes dependencies, generates execution DAGs, assigns subtasks, and validates output.
-          </p>
-          <div class="agent-foot">
-            <span class="pill-tag">DAG Planner</span>
-            <span class="pill-tag">Dynamic Spawner</span>
-            <span class="pill-tag">Synthesizer</span>
-          </div>
-        </div>
-
-        <!-- Browser Agent -->
-        <div class="agent-card">
-          <div class="agent-header">
-            <span class="agent-emoji">🌐</span>
-            <div>
-              <h3 class="agent-name">Browser Agent</h3>
-              <span class="agent-code">Aura Browser</span>
-            </div>
-            <span class="badge-role">Research</span>
-          </div>
-          <p class="agent-summary">
-            Crawls verified web sources, extracts structured factual markdown, inspects technical documentation, and validates citations.
-          </p>
-          <div class="agent-foot">
-            <span class="pill-tag">web_search</span>
-            <span class="pill-tag">fetch_url</span>
-          </div>
-        </div>
-
-        <!-- Communication Agent -->
-        <div class="agent-card">
-          <div class="agent-header">
-            <span class="agent-emoji">✉️</span>
-            <div>
-              <h3 class="agent-name">Communication Agent</h3>
-              <span class="agent-code">Echo Communicator</span>
-            </div>
-            <span class="badge-role">Messaging</span>
-          </div>
-          <p class="agent-summary">
-            Drafts professional emails and message threads. Strictly holds execution for user biometric or tap approval before sending.
-          </p>
-          <div class="agent-foot">
-            <span class="pill-tag">draft_email</span>
-            <span class="pill-tag pill-approval">Approval Required</span>
-          </div>
-        </div>
-
-        <!-- Coding Agent -->
-        <div class="agent-card">
-          <div class="agent-header">
-            <span class="agent-emoji">💻</span>
-            <div>
-              <h3 class="agent-name">Coding Agent</h3>
-              <span class="agent-code">ByteForge</span>
-            </div>
-            <span class="badge-role">Development</span>
-          </div>
-          <p class="agent-summary">
-            Writes clean Kotlin and Python, inspects syntax trees, analyzes repository architectures, and runs code inside safe sandboxes.
-          </p>
-          <div class="agent-foot">
-            <span class="pill-tag">AST Checker</span>
-            <span class="pill-tag">Safe Sandbox</span>
-          </div>
-        </div>
-
-        <!-- Social Media Agent -->
-        <div class="agent-card">
-          <div class="agent-header">
-            <span class="agent-emoji">📱</span>
-            <div>
-              <h3 class="agent-name">Social Media Agent</h3>
-              <span class="agent-code">Nexus Social</span>
-            </div>
-            <span class="badge-role">Publishing</span>
-          </div>
-          <p class="agent-summary">
-            Composes technical posts for X and LinkedIn, suggests viral hooks and hashtags, and manages content calendars with approval gates.
-          </p>
-          <div class="agent-foot">
-            <span class="pill-tag">draft_post</span>
-            <span class="pill-tag pill-approval">Approval Required</span>
-          </div>
-        </div>
-
-        <!-- Device Agent -->
-        <div class="agent-card">
-          <div class="agent-header">
-            <span class="agent-emoji">🤖</span>
-            <div>
-              <h3 class="agent-name">Device Agent</h3>
-              <span class="agent-code">DroidLink</span>
-            </div>
-            <span class="badge-role">Android API</span>
-          </div>
-          <p class="agent-summary">
-            Interfaces with approved Android capabilities: launching apps, sharing content, querying battery/network, and triggering text-to-speech.
-          </p>
-          <div class="agent-foot">
-            <span class="pill-tag">launch_app</span>
-            <span class="pill-tag">share_text</span>
-            <span class="pill-tag">device_settings</span>
-          </div>
-        </div>
-
-        <!-- Research Agent -->
-        <div class="agent-card">
-          <div class="agent-header">
-            <span class="agent-emoji">🔬</span>
-            <div>
-              <h3 class="agent-name">Research Agent</h3>
-              <span class="agent-code">Chronos</span>
-            </div>
-            <span class="badge-role">Knowledge</span>
-          </div>
-          <p class="agent-summary">
-            Cross-references multi-source facts, resolves conflicting data points, and commits synthesized briefs to shared vector memory.
-          </p>
-          <div class="agent-foot">
-            <span class="pill-tag">synthesize_sources</span>
-            <span class="pill-tag">Vector Index</span>
-          </div>
-        </div>
-
-        <!-- Security Agent -->
-        <div class="agent-card">
-          <div class="agent-header">
-            <span class="agent-emoji">🛡️</span>
-            <div>
-              <h3 class="agent-name">Security Agent</h3>
-              <span class="agent-code">Aegis Guardian</span>
-            </div>
-            <span class="badge-role">Defense</span>
-          </div>
-          <p class="agent-summary">
-            Intercepts prompt injection payloads, audits tool scopes, redacts credentials from execution logs, and enforces zero-trust boundaries.
-          </p>
-          <div class="agent-foot">
-            <span class="pill-tag">PromptDefense</span>
-            <span class="pill-tag">SecretRedactor</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Security & Privacy Section -->
-  <section class="section security-section" id="security">
-    <div class="container">
-      <div class="security-card">
-        <div class="security-info">
-          <span class="section-tag">Zero-Trust Mobile Security</span>
-          <h2 class="section-title">Hardware-Backed Security.<br>Zero Silent Exfiltration.</h2>
-          <p class="section-subtitle">
-            SwarmDroid is built on the principle of least privilege. Your private keys never touch unencrypted storage, and sensitive actions never execute without your explicit consent.
-          </p>
-
-          <div class="sec-points">
-            <div class="sec-point">
-              <span class="sec-icon">🔐</span>
-              <div>
-                <h4>Hardware Keystore Encryption</h4>
-                <p>AI provider keys are secured on-device via Android Keystore MasterKeys and AES-256-GCM.</p>
-              </div>
-            </div>
-
-            <div class="sec-point">
-              <span class="sec-icon">🛑</span>
-              <div>
-                <h4>Mandatory Human Approval</h4>
-                <p>Emails, social media posts, and system configurations are blocked until you tap or authenticate.</p>
-              </div>
-            </div>
-
-            <div class="sec-point">
-              <span class="sec-icon">🛡️</span>
-              <div>
-                <h4>Heuristic Prompt Shield</h4>
-                <p>Pre-execution scanning detects instruction overriding, prompt leakage, and jailbreak strings.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="security-preview">
-          <div class="approval-card-mockup">
-            <div class="mockup-header">
-              <span class="mockup-warning-dot"></span>
-              <span>Authorization Required</span>
-            </div>
-            <div class="mockup-body">
-              <span class="mockup-agent">Echo (Communication Agent)</span>
-              <p class="mockup-action">"Requesting permission to dispatch draft email to <strong>engineering@swarmdroid.ai</strong> with subject: 'v1.0 Milestone Release'."</p>
-            </div>
-            <div class="mockup-actions">
-              <button class="mockup-btn btn-deny">Reject</button>
-              <button class="mockup-btn btn-confirm">Approve Action ✓</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Architecture & Code Quickstart Section -->
-  <section class="section code-section" id="tech">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag">Developer Ready</span>
-        <h2 class="section-title">Modern Clean Architecture</h2>
-        <p class="section-subtitle">
-          Built with Kotlin, Jetpack Compose Material 3, Room SQLite, FastAPI WebSocket streaming, and Python async execution.
-        </p>
-      </div>
-
-      <div class="code-box">
-        <div class="code-tabs">
-          <button class="tab-btn active" data-tab="kotlin">Android Compose (Kotlin)</button>
-          <button class="tab-btn" data-tab="python">Python Backend (FastAPI)</button>
-        </div>
-
-        <div id="tab-kotlin" class="code-content active">
-          <pre><code><span class="kw">@Composable</span>
-<span class="kw">fun</span> <span class="fn">SwarmDashboardScreen</span>(viewModel: <span class="type">SwarmViewModel</span>) {
-    <span class="kw">val</span> taskGraph <span class="kw">by</span> viewModel.activeTaskGraph.collectAsState()
-    <span class="kw">val</span> swarmState <span class="kw">by</span> viewModel.swarmState.collectAsState()
-
-    <span class="comment">// Real-time animated Swarm canvas visualizer</span>
-    SwarmVisualizerView(
-        graph = taskGraph,
-        activeAgents = swarmState.activeAgents,
-        onAgentClick = { agentId -> viewModel.inspectAgent(agentId) }
-    )
-
-    <span class="comment">// Human-in-the-loop approval dialog triggered on sensitive tasks</span>
-    <span class="kw">if</span> (swarmState.pendingApproval != <span class="kw">null</span>) {
-        ApprovalDialog(
-            request = swarmState.pendingApproval!!,
-            onApprove = { viewModel.approveTask(it) },
-            onReject = { viewModel.rejectTask(it) }
-        )
-    }
-}</code></pre>
-        </div>
-
-        <div id="tab-python" class="code-content">
-          <pre><code><span class="kw">from</span> backend.orchestration.swarm_orchestrator <span class="kw">import</span> swarm_orchestrator
-<span class="kw">from</span> backend.security.security_core <span class="kw">import</span> PromptDefense
-
-<span class="comment"># 1. Evaluate incoming prompt against injection attacks</span>
-defense = PromptDefense.evaluate(user_prompt)
-<span class="kw">if</span> <span class="kw">not</span> defense.is_safe:
-    <span class="kw">raise</span> SecurityViolation(<span class="str">"Prompt injection detected"</span>)
-
-<span class="comment"># 2. Deconstruct goal into DAG & orchestrate parallel agents</span>
-result = <span class="kw">await</span> swarm_orchestrator.handle_user_request(
-    prompt=<span class="str">"Research Android AI runtimes and draft technical summary"</span>,
-    user_id=<span class="str">"user_mobile_01"</span>
-)
-
-<span class="comment"># 3. Stream real-time events over WebSocket to Android client</span>
-<span class="kw">await</span> websocket_manager.broadcast_event(result)</code></pre>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Download APK Call-to-Action Section -->
-  <section class="section download-section" id="download">
-    <div class="container">
-      <div class="download-banner">
-        <div class="download-content">
-          <div class="download-badge">Official Release</div>
-          <h2 class="download-heading">Get SwarmDroid on Android</h2>
-          <p class="download-subtext">
-            Experience the autonomous multi-agent ecosystem on your device. Free, fully open-source, and privacy-respecting.
-          </p>
-
-          <div class="download-specs">
-            <div class="spec-item">
-              <span class="spec-label">File</span>
-              <span class="spec-value">app-debug.apk</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Version</span>
-              <span class="spec-value">1.0.0 Release</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">File Size</span>
-              <span class="spec-value">18.5 MB</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">OS Target</span>
-              <span class="spec-value">Android 8.0+ (API 26-34)</span>
-            </div>
-          </div>
-
-          <div class="download-actions">
-            <a href="assets/app-debug.apk" class="btn btn-primary btn-xl" download="SwarmDroid-v1.0.apk">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-              </svg>
-              <span>Download APK (18.5 MB)</span>
+    <!-- Navbar -->
+    <nav class="navbar" id="main-navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-shield-halved logo-icon"></i>
+                <span>HackThe<span class="highlight">Web</span></span>
             </a>
-            <a href="https://github.com/swarm-droid/swarmdroid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-xl">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-              <span>GitHub Repository</span>
+            <ul class="nav-links">
+                <li><a href="#features" id="nav-link-features">Features</a></li>
+                <li><a href="#demo" id="nav-link-demo">Interactive Demo</a></li>
+                <li><a href="#installation" id="nav-link-installation">Installation</a></li>
+                <li><a href="#donate" id="nav-link-donate">Donate</a></li>
+                <li><a href="#contact" id="nav-link-contact">Contact</a></li>
+            </ul>
+            <a href="https://github.com/yashab-cyber/hacktheweb" class="btn btn-nav" id="btn-github-nav" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
             </a>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Professional Footer -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/logo.png" alt="SwarmDroid Logo" class="footer-logo">
-          <span class="footer-title">SwarmDroid</span>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="badge"><i class="fa-solid fa-robot"></i> AI-Powered Security</span>
+                </div>
+                <h1 class="hero-title">Next-Gen Web <br><span class="gradient-text">Vulnerability Scanner</span></h1>
+                <p class="hero-subtitle">
+                    An asynchronous, rule-based AI penetration testing framework optimized for security professionals. Gather intelligence, perform security audits, and identify vulnerabilities instantly.
+                </p>
+                <div class="hero-actions">
+                    <a href="#demo" class="btn btn-primary" id="hero-btn-demo">
+                        <i class="fa-solid fa-circle-play"></i> Try Demo Scan
+                    </a>
+                    <a href="#installation" class="btn btn-secondary" id="hero-btn-install">
+                        <i class="fa-solid fa-terminal"></i> Get Started
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="cyber-shield">
+                    <div class="shield-ring ring-1"></div>
+                    <div class="shield-ring ring-2"></div>
+                    <div class="shield-ring ring-3"></div>
+                    <i class="fa-solid fa-user-secret shield-icon animate-pulse"></i>
+                </div>
+            </div>
         </div>
-        <p class="footer-tagline">"An entire swarm of intelligence on your Android device."</p>
-      </div>
+    </header>
 
-      <div class="footer-nav">
-        <a href="https://github.com/swarm-droid/swarmdroid" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://github.com/swarm-droid/swarmdroid/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer">Architecture</a>
-        <a href="https://github.com/swarm-droid/swarmdroid/blob/main/docs/PRD.md" target="_blank" rel="noopener noreferrer">PRD</a>
-        <a href="https://github.com/swarm-droid/swarmdroid/blob/main/docs/SECURITY.md" target="_blank" rel="noopener noreferrer">Security</a>
-        <a href="https://github.com/swarm-droid/swarmdroid/blob/main/docs/API.md" target="_blank" rel="noopener noreferrer">API</a>
-        <a href="https://github.com/swarm-droid/swarmdroid/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a>
-      </div>
+    <!-- Key Metrics / Highlights -->
+    <section class="metrics">
+        <div class="container metrics-grid">
+            <div class="metric-card" id="metric-scanners">
+                <h3 class="metric-num">15+</h3>
+                <p class="metric-label">Active Scanning Modules</p>
+            </div>
+            <div class="metric-card" id="metric-speed">
+                <h3 class="metric-num">Asynchronous</h3>
+                <p class="metric-label">High-Performance Core</p>
+            </div>
+            <div class="metric-card" id="metric-ai">
+                <h3 class="metric-num">Rule-Based</h3>
+                <p class="metric-label">Intelligent AI Engine</p>
+            </div>
+            <div class="metric-card" id="metric-logging">
+                <h3 class="metric-num">JSON</h3>
+                <p class="metric-label">SIEM Logging & Auditing</p>
+            </div>
+        </div>
+    </section>
 
-      <div class="footer-bottom">
-        <p>© 2026 SwarmDroid Open Source Project. Released under the Apache 2.0 License.</p>
-      </div>
-    </div>
-  </footer>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Vulnerability Detection</h2>
+                <p class="section-subtitle">Armed with 15 advanced scanning techniques mapping to OWASP Top 10 and CWE guidelines.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" id="feat-xss">
+                    <div class="feat-icon-container"><i class="fa-solid fa-code icon-xss"></i></div>
+                    <h3>Cross-Site Scripting (XSS)</h3>
+                    <p>Detects Reflected, Stored, and DOM-based scripting vectors.</p>
+                </div>
+                <div class="feature-card" id="feat-sqli">
+                    <div class="feat-icon-container"><i class="fa-solid fa-database icon-sqli"></i></div>
+                    <h3>SQL Injection (SQLi)</h3>
+                    <p>Tests for Error-based, Boolean-based, Time-based, and UNION attacks.</p>
+                </div>
+                <div class="feature-card" id="feat-csrf">
+                    <div class="feat-icon-container"><i class="fa-solid fa-user-shield icon-csrf"></i></div>
+                    <h3>Cross-Site Request Forgery</h3>
+                    <p>Performs token validation audits and secure cookie checks.</p>
+                </div>
+                <div class="feature-card" id="feat-ssrf">
+                    <div class="feat-icon-container"><i class="fa-solid fa-network-wired icon-ssrf"></i></div>
+                    <h3>Server-Side Request Forgery</h3>
+                    <p>Maps out vulnerability points capable of internal port probing.</p>
+                </div>
+                <div class="feature-card" id="feat-lfi">
+                    <div class="feat-icon-container"><i class="fa-solid fa-folder-open icon-lfi"></i></div>
+                    <h3>File Inclusion (LFI/RFI)</h3>
+                    <p>Checks parameters for local and remote path disclosure flaws.</p>
+                </div>
+                <div class="feature-card" id="feat-rce">
+                    <div class="feature-card-glow"></div>
+                    <div class="feat-icon-container"><i class="fa-solid fa-terminal icon-rce"></i></div>
+                    <h3>Remote Code Execution (RCE)</h3>
+                    <p>Identifies command injection vectors and code evaluation flows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Scripts -->
-  <script src="js/swarm_simulator.js"></script>
-  <script src="js/app.js"></script>
+    <!-- Interactive Simulation Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Live Simulator Demo</h2>
+                <p class="section-subtitle">Experience our newly integrated Structured JSON Logging, dynamic fingerprinting, and audit telemetry.</p>
+            </div>
+            
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-terminal close"></span>
+                        <span class="btn-terminal minimize"></span>
+                        <span class="btn-terminal maximize"></span>
+                    </div>
+                    <span class="terminal-title">hacktheweb --scan-mode smart</span>
+                </div>
+                
+                <div class="terminal-body" id="scan-terminal">
+                    <div class="terminal-welcome">
+                        <pre class="terminal-ascii">
+██╗  ██╗ █████╗  ██████╗██╗  ██╗████████╗██╗  ██╗███████╗██╗    ██╗███████╗██████╗ 
+██║  ██║██╔══██╗██╔════╝██║ ██╔╝╚══██╔══╝██║  ██║██╔════╝██║    ██║██╔════╝██╔══██╗
+███████║███████║██║     █████╔╝    ██║   ███████║█████╗  ██║ █╗ ██║█████╗  ██████╔╝
+██╔══██║██╔══██║██║     ██╔═██╗    ██║   ██╔══██║██╔══╝  ██║███╗██║██╔══╝  ██╔══██╗
+██║  ██║██║  ██║╚██████╗██║  ██╗   ██║   ██║  ██║███████╗╚███╔███╔╝███████╗██████╔╝
+╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚══╝╚══╝ ╚══════╝╚═════╝ </pre>
+                        <p class="dim">AI-Powered Web Penetration Testing Tool v1.0.0</p>
+                        <p class="dim">Type target URL below and click Launch Scanner to begin simulation...</p>
+                    </div>
+                    <div id="terminal-output" class="terminal-output"></div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt">$ hacktheweb --target</span>
+                        <input type="text" id="target-input" placeholder="https://example.com" value="https://target-webapp.local">
+                        <button id="btn-run-scan" class="btn btn-terminal-run">Launch Scanner</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="report-view-container" class="report-view-container hidden">
+                <div class="report-panel">
+                    <h3><i class="fa-solid fa-square-poll-vertical"></i> Simulated Scan Report Summary</h3>
+                    <div class="report-stats">
+                        <div class="report-stat-card critical">
+                            <span class="count">1</span>
+                            <span class="label">Critical</span>
+                        </div>
+                        <div class="report-stat-card high">
+                            <span class="count">2</span>
+                            <span class="label">High</span>
+                        </div>
+                        <div class="report-stat-card medium">
+                            <span class="count">3</span>
+                            <span class="label">Medium</span>
+                        </div>
+                        <div class="report-stat-card info">
+                            <span class="count">5</span>
+                            <span class="label">Info / Passive</span>
+                        </div>
+                    </div>
+                    <p class="report-description">
+                        Scan completed in 1.45 seconds. Identified target uses **Nginx** (WebServer), runs **PHP** (via PHPSESSID cookie analysis), and contains client-side **React** components.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation & Setup -->
+    <section id="installation" class="installation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Installation & Get Started</h2>
+                <p class="section-subtitle">Set up HackTheWeb on your local environment in a few commands.</p>
+            </div>
+            
+            <div class="installation-steps">
+                <div class="step-card" id="step-clone">
+                    <span class="step-num">1</span>
+                    <h3>Clone the Repository</h3>
+                    <div class="code-box">
+                        <span class="code-text">git clone https://github.com/yashab-cyber/hacktheweb.git</span>
+                        <button class="btn-copy" onclick="navigator.clipboard.writeText('git clone https://github.com/yashab-cyber/hacktheweb.git')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                </div>
+                
+                <div class="step-card" id="step-install">
+                    <span class="step-num">2</span>
+                    <h3>Install Core Dependencies</h3>
+                    <div class="code-box">
+                        <span class="code-text">pip install -r requirements.txt</span>
+                        <button class="btn-copy" onclick="navigator.clipboard.writeText('pip install -r requirements.txt')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                </div>
+                
+                <div class="step-card" id="step-scan">
+                    <span class="step-num">3</span>
+                    <h3>Run Your First Scan</h3>
+                    <div class="code-box">
+                        <span class="code-text">python3 hacktheweb.py scan https://example.com</span>
+                        <button class="btn-copy" onclick="navigator.clipboard.writeText('python3 hacktheweb.py scan https://example.com')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donate-section">
+        <div class="container text-center">
+            <div class="donate-card">
+                <div class="donate-glow"></div>
+                <h2>💖 Support HackTheWeb Development</h2>
+                <p>
+                    HackTheWeb is open source and maintained by community-driven efforts. If this tool saves you time, helps audits, or supports your security research, consider sponsoring the project.
+                </p>
+                <div class="donate-actions">
+                    <a href="mailto:yashabalam9@gmail.com?subject=HackTheWeb%20Donation%20Inquiry" class="btn btn-primary" id="btn-donate-mail">
+                        <i class="fa-solid fa-envelope"></i> Send Donation Inquiry
+                    </a>
+                </div>
+                <p class="support-note">Donations are managed securely directly via email communication.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacts -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>HackThe<span class="highlight">Web</span></h3>
+                    <p>AI-powered security scanning engine tailored for automated application audits.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Direct Contact</h4>
+                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:yashabalam9@gmail.com">yashabalam9@gmail.com</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:yashabalam707@gmail.com">yashabalam707@gmail.com</a></p>
+                </div>
+                <div class="footer-social-col">
+                    <h4>Connect on Socials</h4>
+                    <div class="social-icons">
+                        <a href="https://x.com/Yashab_cyber" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/yashab-alam" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/yashabcyber" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.threads.net/@yashabcyber" target="_blank" aria-label="Threads"><i class="fa-solid fa-at"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 YashAB Cyber Security (Yashab Alam). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom App Logic -->
+    <script src="app.js"></script>
 </body>
 </html>
