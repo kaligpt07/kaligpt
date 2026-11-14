@@ -1,149 +1,437 @@
-# SwarmDroid 🤖✨
+# HackTheWeb
 
-<p align="center">
-  <img src="assets/logo.png" alt="SwarmDroid Mascot" width="280">
-  <br>
-  <em>"One companion. An entire swarm of intelligence."</em>
-  <br><br>
-  <a href="https://swarm-droid.github.io/swarmdroid/"><img src="https://img.shields.io/badge/Live%20Website-swarm--droid.github.io%2Fswarmdroid-cyan?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Website"></a>
-  <a href="https://github.com/swarm-droid/swarmdroid/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-10B981?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Release"></a>
-  <a href="https://github.com/swarm-droid/swarmdroid/raw/main/app-debug.apk"><img src="https://img.shields.io/badge/Download%20APK-v1.0.0%20Debug-B892FF?style=for-the-badge&logo=android&logoColor=white" alt="Download APK"></a>
-  <a href="https://swarm-droid.github.io/swarmdroid/"><img src="https://img.shields.io/badge/CA-Soon%20Available-F59E0B?style=for-the-badge&logo=coinbase&logoColor=black" alt="CA Soon Available"></a>
-  <a href="https://github.com/swarm-droid/swarmdroid/actions"><img src="https://img.shields.io/badge/GitHub%20Pages-Automated%20CI%2FCD-00F5D4?style=for-the-badge&logo=githubactions&logoColor=black" alt="CI/CD"></a>
-</p>
+<div align="center">
 
----
+![HackTheWeb Logo](https://img.shields.io/badge/HackTheWeb-v1.0-blue?style=for-the-badge)
+[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/platform-linux-lightgrey?style=for-the-badge)](https://www.linux.org/)
 
-**SwarmDroid** is an advanced multi-agent AI ecosystem for Android featuring an adorable, fully animated 3D AI companion mascot. 
+**AI-Powered Web Application Penetration Testing Tool**
 
-Rather than presenting users with a generic chatbot or a static loading spinner, SwarmDroid provides an interactive 3D robot companion that **blinks, breathes, walks, waves, talks, and reacts emotionally**, visually communicating what a collaborative swarm of specialized AI agents is doing in real-time.
+*Automated security testing with intelligent decision-making*
 
-🌐 **Product Website:** [https://swarm-droid.github.io/swarmdroid/](https://swarm-droid.github.io/swarmdroid/)  
-📱 **Android APK Deliverable:** [Download `app-debug.apk`](app-debug.apk) (18.5 MB, API 34+ Ready)  
-🪙 **Contract Address (CA):** `Soon Available` (Official launch will be announced exclusively on this repository and the official website. Beware of fake tokens)  
-📦 **Latest Release:** [v1.0.0 Release](https://github.com/swarm-droid/swarmdroid/releases)
+[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Documentation](#documentation)
+
+</div>
 
 ---
 
-## 🌟 Key Features
+## 🎯 Overview
 
-- **Cute 3D Companion Mascot:**
-  - Real-time 3D rendering using **OpenGL ES 3.0 / GLSurfaceView** seamlessly embedded in **Jetpack Compose**.
-  - PBR metallic-roughness lighting, specular highlights, and emissive electric cyan/lavender glow.
-  - **14 Full Animation States:** `IDLE`, `HAPPY`, `THINKING`, `LISTENING`, `SPEAKING`, `WORKING`, `WALKING`, `RUNNING`, `WAVING`, `CELEBRATING`, `SLEEPING`, `ERROR`, `SURPRISED`, `SAD`.
-  - Natural secondary procedural animation: breathing sine wave, periodic eye blinks, ear twitches, hover bobbing, and speech-synchronized lip-sync waveform modulation.
-  - Interactive touch: Tap triggers emotional celebration; drag rotates companion in 3D.
-  - **Floating Companion Mode:** Android Foreground Service with system overlay (`TYPE_APPLICATION_OVERLAY`) allowing the companion to float over any app!
+**HackTheWeb** is a production-ready, AI-powered web application penetration testing tool designed for security professionals and ethical hackers. It uses rule-based artificial intelligence (no external ML models required) to intelligently scan web applications for vulnerabilities, adapt scanning strategies, and generate comprehensive security reports.
 
-- **Multi-Agent Intelligence Engine:**
-  - **Master Agent (Aegis Prime):** Analyzes natural-language requests, decomposes goals into a Directed Acyclic Graph (DAG) with explicit dependencies, delegates to agents, and presents final results through the 3D companion.
-  - **Specialized Agents:**
-    - `BrowserAgent` (Aura Browser): Web research, search, and page content extraction.
-    - `CommunicationAgent` (Echo Communicator): Email and message drafting with strict human approval gates.
-    - `CodingAgent` (ByteForge Coder): Code analysis, generation, and safe restricted sandbox execution.
-    - `SocialMediaAgent` (Nexus Social): Social post composition and calendars with human approval.
-    - `DeviceAgent` (DroidLink Controller): Approved Android system actions (apps, settings, TTS, sharing).
-    - `ResearchAgent` (Chronos Researcher): Deep multi-source fact-checking and structured report synthesis.
-    - `MemoryAgent` (Mnemosyne Memory): Semantic context retrieval and memory management.
-    - `SecurityAgent` (Aegis Guardian): Prompt injection defense, tool allowlists, and secret redaction.
-  - **Dynamic Agent Creation:** When a novel capability is needed (e.g. `DocumentationAgent`), the Master Agent instantiates a new agent from an approved template with sandboxed tool scopes.
-  - **Interactive Swarm Visualizer:** Real-time animated Compose Canvas node graph displaying the Master Agent at the center, orbiting specialized agents, glowing pulse lines, and moving data packets.
+### Key Highlights
 
-- **Security & Privacy by Design:**
-  - Hardware-backed local credential encryption via **Android Keystore** (`EncryptedSharedPreferences`).
-  - Strict **Human-in-the-Loop** confirmation for sensitive operations (sending emails, posting to social media, modifying system settings).
-  - Multi-provider AI support: **Google Gemini, OpenAI, Anthropic Claude, Ollama (Local), OpenRouter, and Custom OpenAI-compatible endpoints**.
-  - Zero silent data collection; inspectable and deletable Room SQLite memory store.
+- **🤖 AI-Powered:** Intelligent scanning with adaptive algorithms
+- **🚀 Production-Ready:** Fully functional and battle-tested
+- **🔧 No ML Models:** Pure rule-based AI - no external dependencies
+- **🐧 Linux Optimized:** Works on Kali, Ubuntu, Debian, and all security-focused distros
+- **📊 Comprehensive Reporting:** HTML, PDF, JSON, and Markdown reports
+- **⚡ Fast & Efficient:** Asynchronous scanning with rate limiting
+- **🎨 Beautiful CLI:** Rich terminal interface with real-time progress
 
 ---
 
-## 🏗️ Repository Architecture
+## ✨ Features
 
-```
-SwarmDroid/
-├── android/                        # Android Native Application
-│   ├── app/
-│   │   ├── src/main/java/com/swarmdroid/app/
-│   │   │   ├── core/               # DI (AppContainer), Room DB, Theme, OkHttp
-│   │   │   ├── character/          # 3D GLSurfaceView, 14-State Animation SM, Floating Service
-│   │   │   ├── voice/              # SpeechRecognizer (STT) & TextToSpeech (TTS)
-│   │   │   ├── device/             # Android Intent Bridge & System Capabilities
-│   │   │   ├── security/           # Android Keystore EncryptedSharedPreferences
-│   │   │   ├── domain/             # Domain Models (AgentInfo, SwarmTaskItem, SwarmGraph)
-│   │   │   └── presentation/       # Compose Screens, SwarmVisualizerView, Navigation
-│   │   ├── src/main/assets/        # 3D GLB Mascot Asset (swarmdroid_mascot.glb)
-│   │   └── src/test/               # Android JUnit Unit Tests
-│   ├── build.gradle.kts
-│   └── settings.gradle.kts
-│
-├── backend/                        # Multi-Agent Python Backend
-│   ├── api/                        # FastAPI REST endpoints (/chat, /agents, /tasks, /models)
-│   ├── websocket/                  # Real-time WebSocket connection manager & event streaming
-│   ├── orchestration/              # TaskDAG, ExecutionEngine, SwarmOrchestrator
-│   ├── agents/                     # MasterAgent, 8 Core Agents, DynamicAgentManager
-│   ├── models/                     # LLM Provider Abstraction (Gemini, OpenAI, Anthropic, Ollama)
-│   ├── memory/                     # MemoryStore (SQLite) & VectorIndex (Cosine Similarity)
-│   ├── tools/                      # WebSearch, FetchUrl, SandboxCode, DraftEmail, DeviceIntent
-│   ├── security/                   # PromptDefense, SecretRedactor, PermissionScope, AuditLogger
-│   └── main.py                     # FastAPI entrypoint
-│
-├── assets/                         # 3D Mascot Assets
-│   ├── characters/swarmdroid_mascot.glb  # Valid glTF 2.0 Binary Model
-│   └── generate_mascot_glb.py      # Binary GLB Procedural Generator
-│
-├── docs/                           # Architecture & Engineering Documentation
-│   ├── ARCHITECTURE.md             # Complete Architecture Deep Dive
-│   ├── PRD.md                      # Product Requirements Document
-│   ├── SECURITY.md                 # Threat Model, Sandboxing & Keystore Encryption
-│   ├── PRIVACY.md                  # Privacy, Minimum Privilege & Data Governance
-│   └── API.md                      # REST & WebSocket API Specification
-│
-└── tests/                          # Test Suites
-    ├── backend/                    # Python Backend & Orchestrator Pytest Suite
-    └── android/                    # Android Unit Test Suite
-```
+### Vulnerability Scanning
+
+- **XSS (Cross-Site Scripting)** - Reflected, Stored, and DOM-based ✅
+- **SQL Injection** - Error-based, Boolean-based, Time-based, UNION-based ✅
+- **CSRF (Cross-Site Request Forgery)** - Token validation and cookie analysis ✅
+- **SSRF (Server-Side Request Forgery)** - Internal network probing ✅
+- **LFI/RFI (File Inclusion)** - Local and remote file inclusion ✅
+- **XXE (XML External Entity)** - XML injection attacks ✅
+- **Security Headers** - Validates HTTP security headers (HSTS, CSP, etc.) ✅
+- **RCE (Remote Code Execution)** - Command injection and code execution ✅
+- **IDOR (Insecure Direct Object Reference)** - Access control issues ✅
+- **Open Redirect** - URL redirection vulnerabilities ✅
+- **CORS Misconfiguration** - Cross-origin resource sharing issues ✅
+- **Path Traversal** - Directory traversal detection ✅
+- **NoSQL Injection** - MongoDB and NoSQL database attacks ✅
+- **LDAP Injection** - LDAP query injection ✅
+- **SSTI** - Server-Side Template Injection ✅
+
+### AI Intelligence
+
+- **Smart Target Analysis** - Technology stack detection
+- **Adaptive Scanning** - Prioritizes high-impact vulnerabilities
+- **Pattern Recognition** - Learns from scan results
+- **Resource Optimization** - Efficient payload selection
+- **Context-Aware Testing** - Technology-specific vulnerability checks
+
+### Reporting
+
+- **Multiple Formats** - HTML, PDF, JSON, Markdown
+- **Severity Classification** - Critical, High, Medium, Low, Info
+- **OWASP & CWE Mapping** - Industry-standard categorization
+- **Remediation Guidance** - Actionable fix recommendations
+- **Beautiful Visualizations** - Charts and statistics
+
+### 📊 Enterprise Logging & Fingerprinting
+
+- **Structured JSON Logging** - Native JSON logs optimized for Splunk, ELK, and other SIEM log collectors.
+- **Audit Trails** - Secure trace logging of scanner phases, resolving domains, and vulnerabilities detected for operational security auditing.
+- **Dynamic Technology Fingerprinting** - Heuristic fingerprinting mapping response headers, framework cookies (like `PHPSESSID`, `JSESSIONID`, `laravel_session`), and DOM patterns (such as React and Angular markers).
 
 ---
 
-## 🚀 Getting Started
+## 📦 Installation
 
-### 1. Prerequisites
-- **Python:** 3.10+
-- **Android SDK:** API 34+
-- **JDK:** 21 LTS
+### Prerequisites
 
-### 2. Running the Multi-Agent Backend
+- Python 3.8 or higher
+- pip (Python package manager)
+- Linux-based OS (Kali Linux, Ubuntu, Debian, etc.)
+
+### Quick Install
+
 ```bash
-# Set up Python virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r backend/requirements.txt
+# Clone the repository
+git clone https://github.com/yashab-cyber/hacktheweb.git
+cd hacktheweb
 
-# Run the backend server
-python3 -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
-```
-The FastAPI documentation will be available at `http://localhost:8000/docs`.
-
-### 3. Running Backend Tests
-```bash
-PYTHONPATH=. .venv/bin/pytest tests/backend/ -v
+# Run installation script
+chmod +x scripts/install.sh
+./scripts/install.sh
 ```
 
-### 4. Building & Testing the Android Application
+### Manual Installation
+
 ```bash
-cd android
-./gradlew testDebugUnitTest
+# Install system dependencies (Debian/Ubuntu/Kali)
+sudo apt-get update
+sudo apt-get install python3-pip python3-venv python3-dev build-essential \
+                     libssl-dev libffi-dev libxml2-dev libxslt1-dev nmap
+
+# Create virtual environment (recommended)
+python3 -m venv venv
+source venv/bin/activate
+
+# Install HackTheWeb
+pip install -e .
+
+# Initialize configuration
+hacktheweb init-config
+```
+
+### Docker Installation (Coming Soon)
+
+```bash
+docker pull hacktheweb/hacktheweb:latest
+docker run -it hacktheweb/hacktheweb scan https://example.com
 ```
 
 ---
 
-## 🛡️ Security Verification
-- **Prompt Injection Defense:** Scanned via `PromptDefense.evaluate()`.
-- **Credential Protection:** Secrets redacted before logging using `SecretRedactor`.
-- **Tool Allowlist:** Strict validation against `PermissionScope`.
-- **Human Approval:** Sensitive tasks trigger `ApprovalDialog` on Android before execution.
+## 🚀 Usage
+
+### Basic Scan
+
+```bash
+# Simple scan
+hacktheweb scan https://example.com
+
+# Scan with HTML report
+hacktheweb scan https://example.com --format html
+```
+
+### Advanced Scanning
+
+```bash
+# Thorough scan with custom threads
+hacktheweb scan https://example.com --scan-mode thorough --threads 20
+
+# Specific vulnerability tests
+hacktheweb scan https://example.com --techniques xss sqli csrf
+
+# Custom configuration
+hacktheweb scan https://example.com --config custom_config.yaml
+
+# Multiple output formats
+hacktheweb scan https://example.com --format pdf --output ./reports
+```
+
+### CLI Commands
+
+```bash
+# List all available techniques
+hacktheweb list-techniques
+
+# View a report
+hacktheweb view-report reports/report_20231025_143022.json
+
+# Initialize default config
+hacktheweb init-config --output config/myconfig.yaml
+
+# Launch web dashboard (coming soon)
+hacktheweb web
+```
+
+### Python API
+
+```python
+import asyncio
+from hacktheweb.core.config import Config
+from hacktheweb.core.ai_engine import AIEngine
+from hacktheweb.core.scanner import Scanner
+from hacktheweb.reporting.report_generator import ReportGenerator
+
+# Initialize components
+config = Config()
+ai_engine = AIEngine(config)
+scanner = Scanner(config, ai_engine)
+
+# Run scan
+results = asyncio.run(scanner.scan('https://example.com'))
+
+# Generate report
+report_gen = ReportGenerator(config)
+report_path = report_gen.generate(results, format='html')
+
+print(f"Report generated: {report_path}")
+```
 
 ---
 
-## 📜 License
-Apache License 2.0. Built with pride for Android and the autonomous multi-agent future.
+## 📚 Documentation
+
+### Configuration
+
+HackTheWeb uses YAML configuration files. Generate a default config:
+
+```bash
+hacktheweb init-config --output config/myconfig.yaml
+```
+
+**Sample Configuration:**
+
+```yaml
+general:
+  threads: 10
+  timeout: 30
+  delay: 0
+  verify_ssl: false
+
+scanning:
+  max_depth: 3
+  scan_mode: smart  # fast, smart, thorough
+  techniques:
+    - xss
+    - sqli
+    - csrf
+    - ssrf
+
+ai:
+  learning_enabled: true
+  confidence_threshold: 0.7
+  adaptive_scanning: true
+
+reporting:
+  format: html
+  include_payloads: true
+
+rate_limiting:
+  enabled: true
+  requests_per_second: 10
+```
+
+### Scan Modes
+
+- **Fast:** Quick scan with minimal payloads
+- **Smart (Default):** AI-optimized scanning strategy
+- **Thorough:** Comprehensive scan with all techniques
+
+### Report Formats
+
+- **HTML:** Interactive web-based report with styling
+- **PDF:** Professional PDF document
+- **JSON:** Machine-readable format for automation
+- **Markdown:** Text-based report for documentation
+
+---
+
+## 🛡️ Security & Ethics
+
+### Legal Disclaimer
+
+⚠️ **IMPORTANT:** This tool is for authorized security testing only. 
+
+- ✅ **DO:** Get written permission before testing
+- ✅ **DO:** Use on your own systems or with explicit authorization
+- ✅ **DO:** Follow responsible disclosure practices
+- ❌ **DON'T:** Test systems without permission
+- ❌ **DON'T:** Use for illegal activities
+- ❌ **DON'T:** Cause damage or disruption
+
+**By using HackTheWeb, you agree to use it responsibly and ethically.**
+
+### Responsible Usage
+
+1. Always obtain written authorization
+2. Respect scope limitations
+3. Handle sensitive data carefully
+4. Report findings responsibly
+5. Follow local laws and regulations
+
+---
+
+## 💾 Data & Payloads
+
+HackTheWeb comes with comprehensive payload databases and wordlists in the `data/` directory:
+
+### Payload Databases
+- **XSS Payloads** - 28+ injection vectors (basic, encoded, polyglot, DOM-based)
+- **SQLi Payloads** - 42+ SQL injection patterns (MySQL, PostgreSQL, MSSQL)
+- **Sensitive Files** - 40+ Linux/Windows file paths for LFI/Path Traversal
+
+### Discovery & Testing
+- **Common Endpoints** - 30+ API endpoints and admin panels
+- **User Agents** - 8 modern browser user-agent strings
+- **Usernames/Passwords** - Common credentials for authentication testing
+- **File Extensions** - 35+ extensions for file inclusion testing
+- **Technology Fingerprints** - 40+ patterns for technology detection
+
+### Customization
+Add your own payloads by editing files in the `data/` directory:
+
+```bash
+# Add custom XSS payload
+echo '<custom>payload</custom>' >> data/xss_payloads.txt
+
+# Add organization-specific file path
+echo '/var/www/myapp/config.php' >> data/sensitive_files_linux.txt
+```
+
+Scanners automatically load payloads from these files, giving you **500+ payloads** out of the box!
+
+📖 **Learn More:** See [DATA_INTEGRATION_COMPLETE.md](DATA_INTEGRATION_COMPLETE.md)
+
+---
+
+## 🏗️ Architecture
+
+```
+hacktheweb/
+├── core/              # Core engine and AI logic
+│   ├── ai_engine.py   # Rule-based AI engine
+│   ├── scanner.py     # Main scanning orchestrator
+│   └── config.py      # Configuration management
+├── scanners/          # Vulnerability scanners (15 total)
+│   ├── xss_scanner.py
+│   ├── sqli_scanner.py
+│   ├── csrf_scanner.py
+│   ├── ssrf_scanner.py
+│   ├── lfi_scanner.py
+│   ├── rce_scanner.py
+│   ├── idor_scanner.py
+│   └── ...            # 8 more scanners
+├── utils/             # Utility modules
+│   └── data_loader.py # Loads payloads from data/
+├── data/              # Payload databases & wordlists ✨ NEW
+│   ├── xss_payloads.txt
+│   ├── sqli_payloads.txt
+│   ├── sensitive_files_linux.txt
+│   ├── sensitive_files_windows.txt
+│   └── ...            # More data files
+├── recon/             # Reconnaissance modules
+├── exploits/          # Exploit framework
+├── reporting/         # Report generators
+│   └── report_generator.py
+├── web/               # Web dashboard (coming soon)
+└── cli.py             # Command-line interface
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these guidelines:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Setup
+
+```bash
+# Clone and install in development mode
+git clone https://github.com/yashab-cyber/hacktheweb.git
+cd hacktheweb
+pip install -e ".[dev]"
+
+# Run tests
+pytest tests/
+
+# Check code quality
+flake8 hacktheweb/
+black hacktheweb/
+```
+
+---
+
+## 📝 Roadmap
+
+- [x] Core AI engine
+- [x] Basic vulnerability scanners
+- [x] Report generation
+- [x] CLI interface
+- [ ] Web dashboard
+- [ ] API server
+- [ ] Plugin system
+- [ ] Custom payload editor
+- [ ] Collaboration features
+- [ ] CI/CD integration
+- [ ] Browser automation
+- [ ] Mobile app testing
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👥 Authors
+
+**YashAB Cyber Security (Yashab Alam)**
+
+- GitHub: [@yashab-cyber](https://github.com/yashab-cyber)
+- Website: [hacktheweb.io](https://hacktheweb.io)
+- Instagram: [@yashabcyber](https://www.instagram.com/yashabcyber)
+- X (formerly Twitter): [@Yashab_cyber](https://x.com/Yashab_cyber)
+- LinkedIn: [Yashab Alam](https://www.linkedin.com/in/yashab-alam)
+- Threads: [@yashabcyber](https://www.threads.net/@yashabcyber)
+
+---
+
+## 🙏 Acknowledgments
+
+- Inspired by industry-leading security tools
+- Built with modern Python best practices
+- Community-driven development
+
+---
+
+## 📞 Support & Inquiries
+
+For support, feedback, or custom inquiries:
+- **GitHub Issues:** [Issues](https://github.com/yashab-cyber/hacktheweb/issues)
+- **GitHub Discussions:** [Discussions](https://github.com/yashab-cyber/hacktheweb/discussions)
+- **Primary Email:** [yashabalam9@gmail.com](mailto:yashabalam9@gmail.com)
+- **Secondary Email:** [yashabalam707@gmail.com](mailto:yashabalam707@gmail.com)
+- **Donation Enquiries:** Please see [DONATE.md](DONATE.md) for more details.
+
+---
+
+<div align="center">
+
+**Made with ❤️ by security professionals, for security professionals**
+
+⭐ Star this repository if you find it useful!
+
+</div>

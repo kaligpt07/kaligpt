@@ -1,32 +1,39 @@
-# ==========================================
-# SwarmDroid Multi-Agent AI Backend Dockerfile
-# ==========================================
+FROM python:3.11-slim
 
-FROM python:3.12-slim
+LABEL maintainer="YashAB Cyber Security <support@hacktheweb.io>"
+LABEL description="HackTheWeb - AI-Powered Web Application Penetration Testing Tool"
 
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    PYTHONPATH=/app
-
-WORKDIR /app
-
-# Install system utilities
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    nmap \
+    git \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install python dependencies
-COPY backend/requirements.txt /app/backend/requirements.txt
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r /app/backend/requirements.txt
+# Set working directory
+WORKDIR /app
 
-# Copy source code and assets
-COPY backend/ /app/backend/
-COPY assets/ /app/assets/
+# Copy requirements first for better caching
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8000
+# Copy application code
+COPY . .
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8000/ || exit 1
+# Install HackTheWeb
+RUN pip install -e .
 
-CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Create necessary directories
+RUN mkdir -p /app/config /app/data /app/reports
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+
+# Entry point
+ENTRYPOINT ["hacktheweb"]
+CMD ["--help"]
