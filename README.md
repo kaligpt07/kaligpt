@@ -8,6 +8,7 @@
 
 [![Live Website](https://img.shields.io/badge/Live%20Website-yashabcyber7.github.io%2Fhacktheweb-00F5D4?style=for-the-badge&logo=googlechrome&logoColor=black)](https://yashabcyber7.github.io/hacktheweb/)
 [![Release](https://img.shields.io/badge/Release-v1.0.0-10B981?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yashabcyber7/hacktheweb/releases)
+[![CA](https://img.shields.io/badge/CA-4ZF1MB...9Wpump-F59E0B?style=for-the-badge&logo=solana&logoColor=white)](https://pump.fun/4ZF1MBuTcMty196BDiBfvUAxm2VAzPUReVDtpR9Wpump)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-linux-lightgrey?style=for-the-badge)](https://www.linux.org/)
@@ -19,6 +20,18 @@
 [Website](https://yashabcyber7.github.io/hacktheweb/) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [Documentation](#documentation)
 
 </div>
+
+---
+
+### 🪙 Official Token Contract Address (CA)
+
+> [!IMPORTANT]
+> **Official Contract Address (Solana):**
+> ```text
+> 4ZF1MBuTcMty196BDiBfvUAxm2VAzPUReVDtpR9Wpump
+> ```
+> • **Network:** Solana (pump.fun)  
+> • **Security Notice:** Always verify the contract address matches this official repository. Never trust unverified third parties.
 
 ---
 
